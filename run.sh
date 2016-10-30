@@ -9,5 +9,7 @@ docker run -d \
         --name=xware \
         --net dockerdirect \
         --ip 172.22.46.2 \
+        --cpu-sets 0 \
+        --memory 300m \
         -v $(pwd)/data:/app/TDDOWNLOAD \
         xunlei
