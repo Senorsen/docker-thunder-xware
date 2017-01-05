@@ -10,6 +10,5 @@ docker run -d \
         --net dockerdirect \
         --ip 172.22.46.2 \
         --cpuset-cpus 0 \
-        --memory 300m \
         -v $(pwd)/data:/app/TDDOWNLOAD \
         xunlei
