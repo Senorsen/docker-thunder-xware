@@ -20,7 +20,7 @@ COPY start.sh /app/
 RUN chmod +x start.sh && chmod +x ./bin/portal
 RUN mkdir -p TDDOWNLOAD && chown -R directnet: .
 VOLUME /app/TDDOWNLOAD
-#USER directnet
+USER directnet
 
 CMD ["./start.sh"]
 
