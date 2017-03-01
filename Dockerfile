@@ -5,7 +5,7 @@ FROM debian:wheezy-slim
 MAINTAINER Senorsen <senorsen.zhang@gmail.com>
 
 ENV LANG C.UTF-8
-RUN sed -i.bak 's/deb.debian.org/mirrors.aliyun.com/' /etc/apt/sources.list
+# disabled in docker hub RUN sed -i.bak 's/deb.debian.org/mirrors.aliyun.com/' /etc/apt/sources.list
 RUN apt-get update \
     && apt-get install -y procps lib32z1 lib32ncurses5 \
     && apt-get clean \
