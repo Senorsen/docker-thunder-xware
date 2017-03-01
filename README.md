@@ -67,3 +67,12 @@ finished.
 ```
 
 绑定成功后就可以使用了。
+
+## 更新
+```
+# 拉取最新镜像
+docker pull senorsen/docker-thunder-xware
+# 删除旧的 container
+docker rm -f xware
+```
+然后按照上边的方法，在同目录下“运行”一次。原配置、下载内容和账号绑定会保留。
