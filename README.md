@@ -1,6 +1,6 @@
 # Thunder xware docker image
 
-迅雷离线下载 docker 镜像（使用 wheezy-slim 以缩小体积至 ~65MiB），forked from [yinheli](https://github.com/yinheli/docker-thunder-xware)
+迅雷离线下载 docker 镜像（使用 wheezy-slim 以缩小体积至 ~27MiB），forked from [yinheli](https://github.com/yinheli/docker-thunder-xware)
 
 ## 使用
 
