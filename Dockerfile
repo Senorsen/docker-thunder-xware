@@ -2,7 +2,7 @@
 # xware version: Xware1.0.31 release date: 2014-08-27
 
 FROM debian:wheezy-slim
-MAINTAINER yinheli <me@yinheli.com>
+MAINTAINER Senorsen <senorsen.zhang@gmail.com>
 
 ENV LANG C.UTF-8
 RUN sed -i.bak 's/deb.debian.org/mirrors.aliyun.com/' /etc/apt/sources.list
