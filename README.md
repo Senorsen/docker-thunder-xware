@@ -1,16 +1,13 @@
-# Dockerizing thunder xware
+# Thunder xware docker image
 
-迅雷离线下载 docker 镜像, 随便一台能上网的服务器都能成为下载利器哦~
-
-再也不用担心迅雷扫描你的整块磁盘了.
-
+迅雷离线下载 docker 镜像（使用 alpine 系统以缩小体积至 ~65MiB），forked from [yinheli](https://github.com/yinheli/docker-thunder-xware)
 
 ## 使用
 
 ### 拉取镜像
 
 ```
-docker pull yinheli/docker-thunder-xware:latest
+docker pull senorsen/docker-thunder-xware:latest
 ```
 
 ### 创建一个下载目录. 用于挂载卷
@@ -23,10 +20,12 @@ mkdir data
 
 ```
 docker run -d \
-        --name=xware \
-        --net=host \
+        # 通过 restart 来指定异常退出时重启
+        --restart on-failure \
+        --name xware \
+        --net host \
         -v $(pwd)/data:/app/TDDOWNLOAD \
-        yinheli/docker-thunder-xware
+        senorsen/docker-thunder-xware
 ```
 
 ### 查看运行情况
@@ -38,7 +37,7 @@ docker ps
 ```
 // output:
 CONTAINER ID        IMAGE                                 COMMAND             CREATED             STATUS              PORTS               NAMES
-c8a3d047af71        yinheli/docker-thunder-xware:latest   "./start.sh"        4 seconds ago       Up 3 seconds                            xware
+c8a3d047af71        senorsen/docker-thunder-xware:latest   "./start.sh"        4 seconds ago       Up 3 seconds                            xware
 ```
 
 ### 查看日志(激活码)/到迅雷增加设备
@@ -70,7 +69,7 @@ starting xunlei service...
 
 getting xunlei service info...
 
-THE ACTIVE CODE IS: xxx
+THE ACTIVE CODE IS: xxxxxx
 
 go to http://yuancheng.xunlei.com, bind your device with the active code.
 finished.
