@@ -3,14 +3,7 @@
 迅雷离线下载 docker 镜像（使用 wheezy-slim 以缩小体积至 ~27MiB），forked from [yinheli](https://github.com/yinheli/docker-thunder-xware)
 
 ## 使用
-
-### 拉取镜像
-
-```
-docker pull senorsen/docker-thunder-xware:latest
-```
-
-### 创建一个下载目录. 用于挂载卷
+### 创建一个下载目录，用于挂载卷
 
 ```
 mkdir data
@@ -34,8 +27,8 @@ docker run -d \
 docker ps
 ```
 
+**输出**
 ```
-// output:
 CONTAINER ID        IMAGE                                 COMMAND             CREATED             STATUS              PORTS               NAMES
 c8a3d047af71        senorsen/docker-thunder-xware:latest   "./start.sh"        4 seconds ago       Up 3 seconds                            xware
 ```
@@ -46,8 +39,8 @@ c8a3d047af71        senorsen/docker-thunder-xware:latest   "./start.sh"        4
 docker logs xware
 ```
 
+**输出**
 ```
-// output:
 killall: ETMDaemon: no process killed
 killall: EmbedThunderManager: no process killed
 killall: vod_httpserver: no process killed
@@ -75,8 +68,4 @@ go to http://yuancheng.xunlei.com, bind your device with the active code.
 finished.
 ```
 
-绑定成功后就可以开心地使用了.
-
-
-
-
+绑定成功后就可以使用了。
