@@ -13,14 +13,12 @@ RUN apt-get update \
 
 RUN mkdir -p /app/bin
 
-RUN echo 'directnet:x:1001:1001::/app:/bin/sh' >> /etc/passwd
 WORKDIR /app
 COPY thunder /app/
 COPY start.sh /app/
-RUN chmod +x start.sh && chmod +x ./bin/portal
-RUN mkdir -p TDDOWNLOAD && chown -R directnet: .
-VOLUME /app/TDDOWNLOAD
-USER directnet
 
-CMD ["./start.sh"]
+VOLUME /app/TDDOWNLOAD
+VOLUME /app/bin/cfg
+
+CMD sh ./start.sh
 
