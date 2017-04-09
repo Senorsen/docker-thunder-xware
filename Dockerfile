@@ -6,14 +6,14 @@ LABEL maintainer="Senorsen <senorsen.zhang@gmail.com>"
 WORKDIR /app
 
 ENV LANG C.UTF-8
-RUN apt-get update && apt-get upgrade -y && \
+RUN apt-get update && apt-get upgrade -y \
     && apt-get install -y procps lib32z1 lib32ncurses5 \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 RUN mkdir -p /app/bin
 
-COPY thunder start.sh .
+COPY thunder start.sh ./
 RUN chmod +x start.sh
 
 VOLUME /app/TDDOWNLOAD
