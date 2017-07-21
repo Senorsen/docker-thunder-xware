@@ -2,6 +2,14 @@
 
 迅雷离线下载 docker 镜像（使用 wheezy-slim 以缩小体积至 ~27MiB），forked from [yinheli](https://github.com/yinheli/docker-thunder-xware)
 
+## 通知
+http://yuancheng.xunlei.com/ 上的通知：
+尊敬的用户，您好！
+经过与各合作伙伴的深入沟通和协商，为规范远程下载业务的接入与管理，我们将于2017年7月17日起陆续
+停止提供第三方远程下载服务。同时，迅雷旗下产品仍可正常使用该服务。感谢大家对远程下载的喜爱和支持！
+
+（本项目 docker-thunder-xware 是个人封装的 Docker 镜像，并非迅雷官方项目。喷迅雷请到迅雷官方论坛 http://bbs.xunlei.com/forum-196-1.html ）
+
 ## 使用
 ### 运行
 请选择一个合适的目录。第一次运行将创建两个目录：data, config 分别用于存放下载的文件，和迅雷客户端的配置。
