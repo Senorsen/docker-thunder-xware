@@ -1,7 +1,7 @@
 # Dockerizing thunder xware
 # xware version: Xware1.0.31 release date: 2014-08-27
 
-FROM debian:9-slim
+FROM debian:wheezy-slim
 LABEL maintainer="Senorsen <senorsen.zhang@gmail.com>"
 WORKDIR /app
 
