@@ -1,13 +1,13 @@
 # Dockerizing thunder xware
 # xware version: Xware1.0.31 release date: 2014-08-27
 
-FROM debian:wheezy-slim
+FROM i386/debian:wheezy-slim
 LABEL maintainer="Senorsen <senorsen.zhang@gmail.com>"
 WORKDIR /app
 
 ENV LANG C.UTF-8
 RUN apt-get update && apt-get upgrade -y \
-    && apt-get install -y procps lib32z1 lib32ncurses5 \
+    && apt-get install -y procps libz1 libncurses5 \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
